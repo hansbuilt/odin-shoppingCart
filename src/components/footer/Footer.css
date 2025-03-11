@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightpink;
+}
+
+.leftSide {
+  display: flex;
+}
