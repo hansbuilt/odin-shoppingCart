@@ -1,7 +1,8 @@
 .container {
   display: flex;
   justify-content: space-between;
-  background-color: lightyellow;
+  background-color: lightpink;
+  height: 75px;
 }
 
 .leftSide {
