@@ -3,8 +3,16 @@
   justify-content: space-between;
   background-color: lightyellow;
   height: 100px;
+  align-items: center;
 }
 
 .leftSide {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLinks {
+  background-color: grey;
+  margin: 5px;
 }

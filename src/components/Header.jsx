@@ -5,9 +5,9 @@ function Header() {
     <div className={styles.container}>
       <div className={styles.leftSide}>
         <div className="logo">Logo Here</div>
-        <div>cat1</div>
-        <div>cat2</div>
-        <div>cat3</div>
+        <div className={styles.headerLinks}>cat1</div>
+        <div className={styles.headerLinks}>cat2</div>
+        <div className={styles.headerLinks}>cat3</div>
       </div>
       <div className={styles.rightSide}>
         <span>srch</span>
