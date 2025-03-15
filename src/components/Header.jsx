@@ -19,9 +19,10 @@ function Header() {
         </Link>
       </div>
       <div className={styles.rightSide}>
-        <span>srch</span>
-        <span>profile</span>
-        <span>cart</span>
+        <span className="material-icons">search</span>
+        <span className="material-icons">account_circle</span>
+        <span className="material-icons">shopping_cart</span>
+</div>
       </div>
     </div>
   );
