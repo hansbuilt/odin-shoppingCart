@@ -1,8 +1,14 @@
 .container {
-  display: flex;
-  justify-content: space-between;
   background-color: lightyellow;
   height: 100px;
+  width: 100%;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1380px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
