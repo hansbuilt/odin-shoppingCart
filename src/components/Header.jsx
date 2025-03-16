@@ -19,7 +19,6 @@ function Header() {
           </div>
         </div>
         <div className={styles.rightSide}>
-          <span>Search</span>
           <span className="material-icons">account_circle</span>
           <span>Account</span>
           <span className="material-icons">shopping_cart</span>
