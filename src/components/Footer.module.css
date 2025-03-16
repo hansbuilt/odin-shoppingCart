@@ -1,8 +1,9 @@
 .container {
   height: 100px;
   width: 100%;
-  background-color: lightpink;
+  background-color: darkgreen;
   height: 100px;
+  color: white;
 }
 
 .footer {
