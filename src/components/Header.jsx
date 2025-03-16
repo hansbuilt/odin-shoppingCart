@@ -10,18 +10,15 @@ function Header() {
           <Link to="/" className={styles.logoContainer}>
             <img src={logo} alt="Logo" id={styles.logo} />
           </Link>
-          <Link to="category1" className={styles.headerLinks}>
-            Cameras
-          </Link>
-          <Link to="category2" className={styles.headerLinks}>
-            Tripods
-          </Link>
-          <Link to="category3" className={styles.headerLinks}>
-            Accessories
-          </Link>
+
+          <div className={styles.searchContainer}>
+            <input className={styles.searchBar}></input>
+            <span className="material-icons" id={styles.searchIcon}>
+              search
+            </span>
+          </div>
         </div>
         <div className={styles.rightSide}>
-          <span className="material-icons">search</span>
           <span>Search</span>
           <span className="material-icons">account_circle</span>
           <span>Account</span>

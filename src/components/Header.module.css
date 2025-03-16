@@ -17,11 +17,10 @@
 .leftSide {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .headerLinks {
-  /* background-color: grey; */
   margin: 5px 25px;
   color: white;
   text-decoration: none;
@@ -47,4 +46,36 @@
 .rightSide {
   display: flex;
   margin: 5px;
+}
+
+.searchContainer {
+  margin: 0px 20px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.searchBar {
+  height: 100%;
+  width: 500px;
+  outline: none;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+#searchIcon {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 20, 20);
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
