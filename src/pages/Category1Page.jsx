@@ -2,6 +2,8 @@ import styles from "./Category1Page.module.css";
 import ProductCard from "../components/ProductCard";
 
 function Category1Page() {
+  const productIds = [1, 2, 3, 4, 5, 6];
+
   return (
     <>
       <div className={styles.header}>
@@ -9,12 +11,9 @@ function Category1Page() {
         <h2>Cameras</h2>
       </div>
       <div className={styles.container}>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
+        {productIds.map((item) => (
+          <ProductCard key={crypto.randomUUID()} itemID={item}></ProductCard>
+        ))}
       </div>
     </>
   );
