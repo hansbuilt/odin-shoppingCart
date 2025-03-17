@@ -1,12 +1,22 @@
 import styles from "./Category1Page.module.css";
+import ProductCard from "../components/ProductCard";
 
 function Category1Page() {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <span>category page content here</span>
+    <>
+      <div className={styles.header}>
+        <span>Home {">"} Cameras</span>
+        <h2>Cameras</h2>
       </div>
-    </div>
+      <div className={styles.container}>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+      </div>
+    </>
   );
 }
 
