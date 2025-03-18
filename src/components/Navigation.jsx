@@ -6,13 +6,13 @@ function Navigation() {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.leftSide}>
-          <Link to="category1" className={styles.headerLinks}>
+          <Link to="cameras" className={styles.headerLinks}>
             Cameras
           </Link>
-          <Link to="category2" className={styles.headerLinks}>
+          <Link to="tripods" className={styles.headerLinks}>
             Tripods
           </Link>
-          <Link to="category3" className={styles.headerLinks}>
+          <Link to="accessories" className={styles.headerLinks}>
             Accessories
           </Link>
         </div>
