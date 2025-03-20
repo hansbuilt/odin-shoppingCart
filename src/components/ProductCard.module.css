@@ -5,7 +5,7 @@ h3 {
 .container {
   height: 400px;
   width: 300px;
-  background-color: darkgrey;
+  background-color: white;
   display: flex;
   flex-direction: column;
   /* align-items: top; */
@@ -15,7 +15,7 @@ h3 {
 .imageContainer {
   height: 300px;
   width: 300px;
-  background-color: grey;
+  background-color: white;
   padding: 5px 0px;
 }
 

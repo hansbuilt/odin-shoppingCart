@@ -1,6 +1,6 @@
-import styles from "./ProductCard.module.css";
+import styles from "./ProductPage.module.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function useProductData({ itemID }) {
   const [productData, setProductData] = useState({
@@ -25,6 +25,7 @@ function useProductData({ itemID }) {
           image: response.image,
           name: response.title,
           price: response.price,
+          description: response.description,
         })
       )
       .catch((error) => setError(error))
@@ -34,40 +35,37 @@ function useProductData({ itemID }) {
   return { productData, error, loading };
 }
 
-// function Image({ itemID }) {
-//   //set product state i think
+function ProductPage({ categoryName }) {
+  const { itemID } = useParams();
 
-//   const { imageURL, error, loading } = useImageURL({ itemID });
-
-//   return (
-//     <>
-//       {/* <h1>An image</h1> */}
-//       <img src={imageURL} alt={"placeholder text"} />
-//     </>
-//   );
-// }
-
-function ProductCard({ itemID }) {
   const { productData, error, loading } = useProductData({ itemID });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <Link to={`/product/${itemID}`}>
-      <div className={styles.container}>
-        <div className={styles.imageContainer}>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <span>
+          Home {">"} {categoryName}
+        </span>
+        <h2>{categoryName}</h2>
+      </div>
+      <div className={styles.productDetails}>
+        <div className={styles.leftContainer}>
           <img src={productData.image} alt={productData.name} />
         </div>
-        <div className={styles.infoContainer}>
+        <div className={styles.rightContainer}>
           <h3 className={styles.itemName}>{productData.name}</h3>
+          <span>{`SKU ${itemID}`}</span>
+          <p>{productData.description}</p>
           <span className={styles.itemPrice}>
             ${productData.price.toFixed(2)}
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
-export default ProductCard;
+export default ProductPage;
