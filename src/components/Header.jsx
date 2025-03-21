@@ -1,8 +1,17 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function Header() {
+  const { cart } = useContext(CartContext);
+
+  const itemCount = Object.values(cart).reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -22,7 +31,7 @@ function Header() {
           <span className="material-icons">account_circle</span>
           <span>Account</span>
           <span className="material-icons">shopping_cart</span>
-          <span>Cart:</span>
+          <span>Cart: {itemCount}</span>
         </div>
       </div>
       <div></div>
