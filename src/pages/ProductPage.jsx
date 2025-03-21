@@ -1,6 +1,7 @@
 import styles from "./ProductPage.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 function useProductData({ itemID }) {
   const [productData, setProductData] = useState({
@@ -36,6 +37,8 @@ function useProductData({ itemID }) {
 }
 
 function ProductPage({ categoryName }) {
+  const { addToCart } = useContext(CartContext);
+
   const { itemID } = useParams();
 
   const { productData, error, loading } = useProductData({ itemID });
@@ -62,6 +65,18 @@ function ProductPage({ categoryName }) {
           <span className={styles.itemPrice}>
             ${productData.price.toFixed(2)}
           </span>
+          <button
+            onClick={() =>
+              addToCart(
+                itemID,
+                1,
+                productData.name,
+                productData.price.toFixed(2)
+              )
+            }
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
