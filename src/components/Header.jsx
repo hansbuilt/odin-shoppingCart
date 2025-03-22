@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { useCartToggle } from "../context/CartVisibilityContext";
 
-function Header() {
+function Header({}) {
   const { cart } = useContext(CartContext);
+  const { isCartVisible, showCart } = useCartToggle();
 
   const itemCount = Object.values(cart).reduce(
     (total, item) => total + item.quantity,
@@ -30,7 +32,9 @@ function Header() {
         <div className={styles.rightSide}>
           <span className="material-icons">account_circle</span>
           <span>Account</span>
-          <span className="material-icons">shopping_cart</span>
+          <span className="material-icons" onClick={showCart}>
+            shopping_cart
+          </span>
           <span>Cart: {itemCount}</span>
         </div>
       </div>

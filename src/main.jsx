@@ -7,6 +7,7 @@ import ProductCategoryPage from "./pages/ProductCategoryPage.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import Layout from "./pages/Layout.jsx";
 import { CartProvider } from "./context/CartContext";
+import { CartToggleProvider } from "./context/CartVisibilityContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
-      <RouterProvider router={router} />
+      <CartToggleProvider>
+        <RouterProvider router={router} />
+      </CartToggleProvider>
     </CartProvider>
   </StrictMode>
 );

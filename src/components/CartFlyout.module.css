@@ -1,0 +1,16 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background-color: red;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.visible {
+  right: 0;
+}

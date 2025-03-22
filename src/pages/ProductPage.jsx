@@ -2,6 +2,7 @@ import styles from "./ProductPage.module.css";
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { useCartToggle } from "../context/CartVisibilityContext";
 
 function useProductData({ itemID }) {
   const [productData, setProductData] = useState({
@@ -43,9 +44,12 @@ function ProductPage({ categoryName }) {
 
   const { productData, error, loading } = useProductData({ itemID });
 
+  const { showCart } = useCartToggle();
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
+  console.log(showCart);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -66,14 +70,15 @@ function ProductPage({ categoryName }) {
             ${productData.price.toFixed(2)}
           </span>
           <button
-            onClick={() =>
+            onClick={() => {
               addToCart(
                 itemID,
                 1,
                 productData.name,
                 productData.price.toFixed(2)
-              )
-            }
+              );
+              showCart();
+            }}
           >
             Add to Cart
           </button>
