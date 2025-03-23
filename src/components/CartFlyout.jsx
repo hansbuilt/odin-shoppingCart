@@ -46,6 +46,7 @@ function CartFlyout() {
               itemID={itemID}
               name={cropString(item.name, 40)}
               quantity={item.quantity}
+              price={item.price}
               extendedPrice={item.extendedPrice}
             />
           ))}
