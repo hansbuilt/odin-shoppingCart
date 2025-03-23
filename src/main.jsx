@@ -19,29 +19,33 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "cameras",
+        path: "clothing",
         element: (
           <ProductCategoryPage
-            categoryName="Cameras"
-            productIds={[1, 2, 3, 4, 5]}
+            categoryName="Clothing"
+            productIds={[1, 2, 3, 4]}
           />
         ),
       },
       {
-        path: "tripods",
+        path: "jewelry",
         element: (
-          <ProductCategoryPage categoryName="Tripods" productIds={[6, 7, 8]} />
+          <ProductCategoryPage
+            categoryName="Jewelry"
+            productIds={[5, 6, 7, 8]}
+          />
         ),
       },
       {
-        path: "accessories",
+        path: "electronics",
         element: (
           <ProductCategoryPage
-            categoryName="Accessories & More"
+            categoryName="Electronics"
             productIds={[9, 10, 11, 12, 13, 14]}
           />
         ),
       },
+
       { path: "product/:itemID", element: <ProductPage /> },
     ],
   },
