@@ -1,8 +1,8 @@
 .container {
   position: fixed;
   top: 0;
-  right: -400px;
-  width: 300px;
+  right: -500px;
+  width: 400px;
   height: 100%;
   background-color: red;
   transition: right 0.3s ease-in-out;
@@ -13,4 +13,47 @@
 
 .visible {
   right: 0;
+}
+
+.cartItems {
+  width: 100%;
+}
+
+.cartItems > table {
+  width: 100%;
+}
+
+.cartItems > table > tr {
+  vertical-align: top;
+}
+
+.cartItems > table > tr > td:nth-child(2) {
+  word-wrap: break-word;
+}
+
+.cartItems > table > tr > td:nth-child(3),
+.cartItems > table > tr > td:nth-child(4),
+.cartItems > table > tr > td:nth-child(5),
+.cartItems > table > tr > td:nth-child(7) {
+  text-align: center;
+}
+
+.cartItems > table > tr > td:nth-child(6) {
+  text-align: right;
+}
+
+.cartItems > table > tr > th {
+  text-align: center;
+}
+
+.cartTotal > table {
+  width: 100%;
+}
+
+.cartTotal > table > tr > th {
+  text-align: left;
+}
+
+.cartTotal > table > tr > td {
+  text-align: right;
 }
