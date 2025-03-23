@@ -45,7 +45,7 @@ function CartFlyout() {
               <CartItem
                 key={crypto.randomUUID()}
                 itemID={itemID}
-                name={cropString(item.name, 40)}
+                name={cropString(item.name, 50)}
                 quantity={item.quantity}
                 price={item.price}
                 extendedPrice={item.extendedPrice}
@@ -76,6 +76,10 @@ function CartFlyout() {
             </tr>
           </tbody>
         </table>
+        <button className={styles.buttonCheckout}>Checkout</button>
+        <button onClick={hideCart} className={styles.buttonKeepShopping}>
+          Keep Shopping
+        </button>
       </div>
     </div>
   );

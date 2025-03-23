@@ -4,33 +4,77 @@
   right: -500px;
   width: 400px;
   height: 100%;
-  background-color: red;
+  background-color: lightgrey;
   transition: right 0.3s ease-in-out;
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   padding: 20px;
+  border-left: 1px solid green;
+  background-color: rgb(243, 255, 243);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .visible {
   right: 0;
 }
 
+.buttonCheckout {
+  background-color: green;
+  color: white;
+}
+
+.buttonCheckout,
+.buttonKeepShopping {
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: 50px;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid darkgreen;
+}
+
 .cartItems {
   width: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.cartTotal {
+  flex: 0 0 auto;
+  padding-bottom: 30px;
 }
 
 .cartItems > table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .cartItems > table > tbody > tr {
   vertical-align: top;
 }
 
-.cartItems > table > tbody > tr > td:nth-child(2) {
-  word-wrap: break-word;
+.cartItems > table > tbody > tr > td {
+  margin: 0;
+  padding: 10px 3px;
+  border-top: 1px solid green;
+  font-size: 0.9rem;
 }
 
+.cartItems > table > tbody > tr > td > button {
+  background-color: none;
+  border: none;
+}
+
+.cartItems > table > tbody > tr > td:nth-child(2) {
+  word-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+.cartItems > table > tbody > tr > td:nth-child(1),
 .cartItems > table > tbody > tr > td:nth-child(3),
 .cartItems > table > tbody > tr > td:nth-child(4),
 .cartItems > table > tbody > tr > td:nth-child(5),
@@ -56,4 +100,34 @@
 
 .cartTotal > table > tbody > tr > td {
   text-align: right;
+}
+
+.cartTotal > table > tbody > tr:nth-child(4) {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* table col sizing */
+
+.cartItems > table > tbody > tr > td:nth-child(1) {
+  width: 5%;
+}
+.cartItems > table > tbody > tr > td:nth-child(2) {
+  width: 50%;
+}
+.cartItems > table > tbody > tr > td:nth-child(3) {
+  width: 4%;
+}
+.cartItems > table > tbody > tr > td:nth-child(4) {
+  width: 7%;
+}
+.cartItems > table > tbody > tr > td:nth-child(5) {
+  width: 4%;
+}
+.cartItems > table > tbody > tr > td:nth-child(6) {
+  width: 25%;
+}
+
+.cartItems > table > tbody > tr > td:nth-child(7) {
+  width: 5%;
 }
