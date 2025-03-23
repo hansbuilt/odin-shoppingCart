@@ -71,12 +71,7 @@ function ProductPage({ categoryName }) {
           </span>
           <button
             onClick={() => {
-              addToCart(
-                itemID,
-                1,
-                productData.name,
-                productData.price.toFixed(2)
-              );
+              addToCart(itemID, 1, productData.name, productData.price);
               showCart();
             }}
           >
