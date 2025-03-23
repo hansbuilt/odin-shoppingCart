@@ -31,46 +31,50 @@ function CartFlyout() {
       </div>
       <div className={styles.cartItems}>
         <table>
-          <tr>
-            <th>#</th>
-            <th>Desc</th>
-            <th></th>
-            <th>Qty</th>
-            <th></th>
-            <th>Price</th>
-          </tr>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Desc</th>
+              <th></th>
+              <th>Qty</th>
+              <th></th>
+              <th>Price</th>
+            </tr>
 
-          {Object.entries(cart).map(([itemID, item]) => (
-            <CartItem
-              key={crypto.randomUUID()}
-              itemID={itemID}
-              name={cropString(item.name, 40)}
-              quantity={item.quantity}
-              price={item.price}
-              extendedPrice={item.extendedPrice}
-            />
-          ))}
+            {Object.entries(cart).map(([itemID, item]) => (
+              <CartItem
+                key={crypto.randomUUID()}
+                itemID={itemID}
+                name={cropString(item.name, 40)}
+                quantity={item.quantity}
+                price={item.price}
+                extendedPrice={item.extendedPrice}
+              />
+            ))}
+          </tbody>
         </table>
       </div>
 
       <div className={styles.cartTotal}>
         <table>
-          <tr>
-            <th>Subtotal</th>
-            <td>${orderTotal.toFixed(2)}</td>
-          </tr>
-          <tr>
-            <th>Shipping</th>
-            <td>$0.00</td>
-          </tr>
-          <tr>
-            <th>Tax</th>
-            <td>$0.00</td>
-          </tr>
-          <tr>
-            <th>Order Total</th>
-            <td>${orderTotal.toFixed(2)}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Subtotal</th>
+              <td>${orderTotal.toFixed(2)}</td>
+            </tr>
+            <tr>
+              <th>Shipping</th>
+              <td>$0.00</td>
+            </tr>
+            <tr>
+              <th>Tax</th>
+              <td>$0.00</td>
+            </tr>
+            <tr>
+              <th>Order Total</th>
+              <td>${orderTotal.toFixed(2)}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

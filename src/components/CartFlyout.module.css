@@ -23,26 +23,26 @@
   width: 100%;
 }
 
-.cartItems > table > tr {
+.cartItems > table > tbody > tr {
   vertical-align: top;
 }
 
-.cartItems > table > tr > td:nth-child(2) {
+.cartItems > table > tbody > tr > td:nth-child(2) {
   word-wrap: break-word;
 }
 
-.cartItems > table > tr > td:nth-child(3),
-.cartItems > table > tr > td:nth-child(4),
-.cartItems > table > tr > td:nth-child(5),
-.cartItems > table > tr > td:nth-child(7) {
+.cartItems > table > tbody > tr > td:nth-child(3),
+.cartItems > table > tbody > tr > td:nth-child(4),
+.cartItems > table > tbody > tr > td:nth-child(5),
+.cartItems > table > tbody > tr > td:nth-child(7) {
   text-align: center;
 }
 
-.cartItems > table > tr > td:nth-child(6) {
+.cartItems > table > tbody > tr > td:nth-child(6) {
   text-align: right;
 }
 
-.cartItems > table > tr > th {
+.cartItems > table > tbody > tr > th {
   text-align: center;
 }
 
@@ -50,10 +50,10 @@
   width: 100%;
 }
 
-.cartTotal > table > tr > th {
+.cartTotal > table > tbody > tr > th {
   text-align: left;
 }
 
-.cartTotal > table > tr > td {
+.cartTotal > table > tbody > tr > td {
   text-align: right;
 }

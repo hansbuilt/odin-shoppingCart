@@ -49,7 +49,6 @@ function ProductPage({ categoryName }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
-  console.log(showCart);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
