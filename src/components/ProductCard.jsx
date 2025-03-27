@@ -34,27 +34,14 @@ function useProductData({ itemID }) {
   return { productData, error, loading };
 }
 
-// function Image({ itemID }) {
-//   //set product state i think
-
-//   const { imageURL, error, loading } = useImageURL({ itemID });
-
-//   return (
-//     <>
-//       {/* <h1>An image</h1> */}
-//       <img src={imageURL} alt={"placeholder text"} />
-//     </>
-//   );
-// }
-
-function ProductCard({ itemID }) {
+function ProductCard({ itemID, category }) {
   const { productData, error, loading } = useProductData({ itemID });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <Link to={`/product/${itemID}`}>
+    <Link to={`/product/${itemID}`} state={{ category }}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <img src={productData.image} alt={productData.name} />

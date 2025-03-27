@@ -14,7 +14,11 @@ function ProductCategoryPage({ categoryName, productIds }) {
       </div>
       <div className={styles.container}>
         {productIds.map((item) => (
-          <ProductCard key={crypto.randomUUID()} itemID={item}></ProductCard>
+          <ProductCard
+            key={crypto.randomUUID()}
+            itemID={item}
+            category={categoryName}
+          ></ProductCard>
         ))}
       </div>
     </>

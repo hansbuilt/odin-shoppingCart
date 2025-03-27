@@ -1,6 +1,6 @@
 import styles from "./ProductPage.module.css";
 import { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { useCartToggle } from "../context/CartVisibilityContext";
 
@@ -37,7 +37,7 @@ function useProductData({ itemID }) {
   return { productData, error, loading };
 }
 
-function ProductPage({ categoryName }) {
+function ProductPage() {
   const { addToCart } = useContext(CartContext);
 
   const { itemID } = useParams();
@@ -45,6 +45,9 @@ function ProductPage({ categoryName }) {
   const { productData, error, loading } = useProductData({ itemID });
 
   const { showCart } = useCartToggle();
+
+  const location = useLocation();
+  const categoryName = location.state?.category || "";
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
@@ -55,7 +58,7 @@ function ProductPage({ categoryName }) {
         <span>
           Home {">"} {categoryName}
         </span>
-        <h2>{categoryName}</h2>
+        {/* <h2>{categoryName}</h2> */}
       </div>
       <div className={styles.productDetails}>
         <div className={styles.leftContainer}>
