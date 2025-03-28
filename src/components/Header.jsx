@@ -28,9 +28,15 @@ function Header({}) {
           </span>
         </div>
         <div className={styles.rightSide}>
-          <span className="material-icons">account_circle</span>
+          <span className="material-icons" id={styles.accountIcon}>
+            account_circle
+          </span>
           <span>Account</span>
-          <span className="material-icons" onClick={showCart}>
+          <span
+            className="material-icons"
+            id={styles.cartIcon}
+            onClick={showCart}
+          >
             shopping_cart
           </span>
           <span>Cart: {itemCount}</span>

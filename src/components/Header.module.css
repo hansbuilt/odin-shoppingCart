@@ -43,6 +43,11 @@
   margin: 3px;
 }
 
+#cartIcon:hover,
+#accountIcon:hover {
+  color: white;
+}
+
 .searchContainer {
   margin: 0px 20px;
   height: 30px;
@@ -77,10 +82,7 @@
   border-bottom-left-radius: 0;
 }
 
-.headerLinks {
-  margin: 5px 25px;
+#searchIcon:hover {
+  background-color: darkgreen;
   color: white;
-  text-decoration: none;
-  text-emphasis: bold;
-  font-size: 24px;
 }
