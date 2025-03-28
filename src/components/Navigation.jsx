@@ -18,7 +18,7 @@ function Navigation() {
         </div>
         <div className={styles.rightSide}>
           <span className={`material-icons ${styles.headerIcons}`}>phone</span>
-          <span>555-555-5555</span>
+          <span id={styles.phoneNumber}>555-555-5555</span>
         </div>
       </div>
     </div>

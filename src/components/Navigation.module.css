@@ -38,3 +38,12 @@
 .headerIcons {
   color: white;
 }
+
+.headerLinks:hover,
+#phoneNumber:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+ {
+}
