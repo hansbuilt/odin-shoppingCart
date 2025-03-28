@@ -17,17 +17,15 @@ function Header({}) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.leftSide}>
-          <Link to="/" className={styles.logoContainer}>
-            <img src={logo} alt="Logo" id={styles.logo} />
-          </Link>
+        <Link to="/" className={styles.logoContainer}>
+          <img src={logo} alt="Logo" id={styles.logo} />
+        </Link>
 
-          <div className={styles.searchContainer}>
-            <input className={styles.searchBar}></input>
-            <span className="material-icons" id={styles.searchIcon}>
-              search
-            </span>
-          </div>
+        <div className={styles.searchContainer}>
+          <input className={styles.searchBar}></input>
+          <span className="material-icons" id={styles.searchIcon}>
+            search
+          </span>
         </div>
         <div className={styles.rightSide}>
           <span className="material-icons">account_circle</span>
@@ -38,7 +36,6 @@ function Header({}) {
           <span>Cart: {itemCount}</span>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }

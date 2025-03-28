@@ -16,14 +16,6 @@
   align-items: center;
 }
 
-.leftSide {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 150px;
-  /* justify-content: space-between; */
-}
-
 .logoContainer {
   display: flex;
   align-items: center;
