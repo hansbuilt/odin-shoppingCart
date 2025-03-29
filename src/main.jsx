@@ -7,7 +7,7 @@ import ProductCategoryPage from "./pages/ProductCategoryPage.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import Layout from "./pages/Layout.jsx";
 import { CartProvider } from "./context/CartContext";
-import { CartToggleProvider } from "./context/CartVisibilityContext.jsx";
+import { CartToggleProvider } from "./context/CartToggleContext.jsx";
 
 const router = createBrowserRouter([
   {

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { useCartToggle } from "../context/CartVisibilityContext";
+import { useCartToggle } from "../context/CartToggleContext";
 import CartItem from "./CartItem";
 import styles from "./CartFlyout.module.css";
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { useCartToggle } from "../context/CartVisibilityContext";
+import { useCartToggle } from "../context/CartToggleContext";
 
 function Header({}) {
   const { cart } = useContext(CartContext);

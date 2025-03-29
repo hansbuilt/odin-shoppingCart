@@ -2,7 +2,7 @@ import styles from "./ProductPage.module.css";
 import { useState, useEffect, useContext } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { useCartToggle } from "../context/CartVisibilityContext";
+import { useCartToggle } from "../context/CartToggleContext";
 
 function useProductData({ itemID }) {
   const [productData, setProductData] = useState({
