@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useCartToggle } from "../context/CartToggleContext";
 
-function Header({}) {
+function Header() {
   const { cart } = useContext(CartContext);
   const { isCartVisible, showCart } = useCartToggle();
 

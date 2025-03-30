@@ -15,8 +15,8 @@
 .homeBannerContainer {
   background: linear-gradient(
       to right,
-      rgba(0, 50, 0, 0.8),
-      rgba(0, 50, 0, 0.5),
+      rgba(0, 50, 0, 0.9),
+      rgba(0, 50, 0, 0.6),
       rgba(0, 50, 0, 0)
     ),
     url("../assets/homeBanner.webp") no-repeat center/cover;
@@ -34,7 +34,7 @@
 }
 
 .homeBannerText {
-  padding: 10px;
+  padding: 30px;
   color: white;
   width: 33%;
   font-size: 2rem;

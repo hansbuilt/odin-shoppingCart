@@ -15,6 +15,8 @@ function useProductData({ itemID }) {
 
   useEffect(() => {
     const url = `https://fakestoreapi.com/products/${itemID}`;
+    // console.log("TEST**: product with ID: ", itemID);
+
     fetch(url, { mode: "cors" })
       .then((response) => {
         if (response.status >= 400) {
