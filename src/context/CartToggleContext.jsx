@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-const CartToggleContext = createContext();
+export const CartToggleContext = createContext();
 
 export const useCartToggle = () => useContext(CartToggleContext);
 
