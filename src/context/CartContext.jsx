@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState({}); // { itemId: {quantity, name, unitPrice }
 
   const addToCart = (itemID, qtyAdded, name, price) => {
-    //may add qty here later
+    console.log("add to cart clicked");
     setCart((prev) => ({
       ...prev,
       [itemID]: prev[itemID]
