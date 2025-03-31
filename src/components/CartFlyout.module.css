@@ -20,6 +20,12 @@
   right: 0;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .buttonCheckout {
   background-color: green;
   color: white;

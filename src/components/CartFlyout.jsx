@@ -34,8 +34,13 @@ function CartFlyout() {
       <div
         className={`${styles.container} ${isCartVisible ? styles.visible : ""}`}
       >
-        <div>
-          <button onClick={hideCart}>close cart</button>
+        <div className={styles.header}>
+          <h3>Your Cart</h3>
+          <button onClick={hideCart}>
+            <span className="material-icons" id={styles.accountIcon}>
+              close
+            </span>
+          </button>
         </div>
         <div className={styles.cartItems}>
           <table>
